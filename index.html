@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>To-do</h1>
+    <p class="sub">Add a picture and what you want to do.</p>
+
+    <form id="task-form">
+      <label class="upload" for="task-image">
+        <input type="file" id="task-image" accept="image/*">
+        <img id="preview" alt="Chosen picture" hidden>
+        <span id="upload-text">+ Add a picture</span>
+      </label>
+
+      <div class="row">
+        <input type="text" id="task-text" placeholder="What do you want to do?">
+        <button type="submit">Add</button>
+      </div>
+    </form>
+
+    <div class="view">
+      <button type="button" data-view="grid">Grid</button>
+      <button type="button" data-view="list">List</button>
+    </div>
+
+    <ul id="list"></ul>
+    <p class="empty" id="empty">No tasks yet.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
